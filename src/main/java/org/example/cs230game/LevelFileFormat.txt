@@ -1,0 +1,52 @@
+
+The entire Level file must be within curly braces {} 
+so that the start and end of the level specification can be identified
+when a file with multiple levels needs to be decoded
+
+{
+
+First the number of rows and columns of the level must be specified
+[number of rows] [number of columns]
+
+Colours are now specified
+Each line represents a row and 4 colours must be specified in 4 uppercase letters for each cell 
+[RRGY] [BBGY] ...
+[RRGY] [BBGY] ...
+
+Then the time to complete the level and the current score are specified
+[time to complete]
+[current score]
+
+Player:
+[<name> <row> <column> <startcolour>]
+
+DumbThief:
+[<name> <row> <column> <startcolour> <startdirection:UP/DOWN/LEFT/RIGHT>]
+
+SmartThief:
+[<name> <row> <column> <startcolour> <startdirection:UP/DOWN/LEFT/RIGHT>]
+
+FlyingAssassin:
+[<name> <row> <column> <startdirection:UP/DOWN/LEFT/RIGHT>]
+
+Bomb:
+[<name> <row> <column>]
+
+Clock:
+[<name> <row> <column> <timetoadd>]
+
+Door:
+[<name> <row> <column>]
+
+Loot:
+[<name> <row> <column> <scoretoadd>]
+
+Gate and Levers:
+first the gate must be specified 
+[<name> <row> <column>]
+then all levers needed to open gate
+[<name> <row> <column>]
+[<name> <row> <column>]
+
+
+}
