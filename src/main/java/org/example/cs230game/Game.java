@@ -19,7 +19,7 @@ public class Game extends Application {
     public static final int SCREEN_HEIGHT = 720;
     public static final int WORLD_WIDTH = 1280;
     public static final int WORLD_HEIGHT = 720;
-    public static final int GRID_CELL_SIZE = 30;
+    public static final int GRID_CELL_SIZE = 64;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -48,7 +48,21 @@ public class Game extends Application {
 
 
         Scene scene = new Scene(world);
-        Player player = new Player(0, 0, new ImageView(getClass().getResource("/img1.png").toString()), scene);
+        Player player = new Player(0, 0, new ImageView(getClass().getResource("/frogplayer.png").toString()), scene);
+        ArrayList<GridCell> cells = new ArrayList<>();
+
+        CellColour[] col1 = new CellColour[]{CellColour.RED, CellColour.BLUE, CellColour.RED, CellColour.BLUE};
+        cells.add(new GridCell(col1, 0, 0));
+
+        CellColour[] col2 = new CellColour[]{CellColour.GREEN, CellColour.ORANGE, CellColour.GREEN, CellColour.ORANGE};
+        cells.add(new GridCell(col2, 0, 1));
+
+        CellColour[] col3 = new CellColour[]{CellColour.RED, CellColour.RED, CellColour.RED, CellColour.RED};
+        cells.add(new GridCell(col3, 0, 2));
+
+        for(GridCell cell : cells) {
+            world.getChildren().add(cell.getNode());
+        }
         world.getChildren().add(player.getNode());
 
         ArrayList<Updateable> updateables = new ArrayList<>();

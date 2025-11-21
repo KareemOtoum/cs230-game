@@ -1,6 +1,7 @@
 package org.example.cs230game;
 
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.util.Pair;
 import org.example.cs230game.MoveDirection;
@@ -8,7 +9,7 @@ import org.example.cs230game.Moveable;
 
 public abstract class NonColorBasedMovable extends Moveable {
 
-    NonColorBasedMovable(int row, int col, ImageView sprite) {
+    NonColorBasedMovable(int row, int col, Node sprite) {
         super(row, col, sprite);
     }
 

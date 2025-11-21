@@ -1,11 +1,12 @@
 package org.example.cs230game;
 
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.util.Pair;
 
 public abstract class ColorBasedMovable extends Moveable {
 
-    ColorBasedMovable(int row, int col, ImageView sprite) {
+    ColorBasedMovable(int row, int col, Node sprite) {
         super(row, col, sprite);
     }
 

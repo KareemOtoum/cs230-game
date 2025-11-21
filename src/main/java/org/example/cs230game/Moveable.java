@@ -1,5 +1,6 @@
 package org.example.cs230game;
 
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Pair;
@@ -15,7 +16,7 @@ enum MoveDirection {
 public abstract class Moveable extends GameObject {
     protected LevelGrid levelGrid;
 
-    Moveable(int row, int col, ImageView sprite) {
+    Moveable(int row, int col, Node sprite) {
         super(row, col, sprite);
     }
     
